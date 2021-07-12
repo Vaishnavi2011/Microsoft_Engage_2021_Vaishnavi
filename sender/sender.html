@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="styles.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Sender</title>
+</head>
+<body>
+    <header>        
+        <div class="container">
+            <img src="Logo.png" alt="logo" class="logo">
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+<div id="about">
+    <h1>Microsoft Teams Clone</h1><br>
+    <img src="image.png" alt="Teams Image" class="img">
+    <p class="heading"><b><u>ABOUT</u></b></p>
+    <h2>This is a Microsoft Teams Clone having chat and video calling feature between two people.</h2>
+    <h3>
+        Press the chat button to start the chat<br>
+        Enter username in the input-box and press send. Then start video call.<br>
+        Copy the given link in new tab - <u>https://mt-clone.herokuapp.com/receiver/receiver.html</u><br>
+        Username should be same  on both sender and receiver side<br>
+    </h3>
+</div>
+
+<div id="chat" class="chat">
+    <p class="heading"><b><u>CHAT</u></b></p>
+    <img src="chat.jpg" class="img1">
+    <h3>Click the button to start the chat</h3>
+    <script>
+        function NewTab() {
+            window.open(
+            "https://arcane-journey-18816.herokuapp.com/", "_blank");
+        }
+    </script>
+    <button onclick="NewTab()" class="button1">
+        Chat Box
+    </button>
+</div>    
+<div id="video" class="video">
+    <p class="heading"><b><u>VIDEO</u></b></p>
+    <br>
+    <div class="btn">
+    <!-- <button onclick="user_id()" class="button2">Send</button> -->
+    <img src="VideoCall.JPG" class="img2" >
+    <div class="video-call">
+    <p class="VideoCallText"><br><br>Click the button to start the video calling application</p>
+    <a href="video.html"><button class="button3">Video Call</button></a>
+    </div>
+    </div>
+</div>
+<div id="contact">
+    <section class="contact">
+        <p class=myContact><b>CONTACT</b>- vaishnavisrivastava2701@gmail.com</p>
+    </section>
+</div>
+
+<script>  
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }; 
+</script>
+</body>
+</html>

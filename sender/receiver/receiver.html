@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .receiver_page{
+            text-align: center;
+        }
+        #username-input{
+            background-color: rgba(0,0,0,0.5);
+            width: 55%;
+            height:7vh;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            border-radius: 10px 0px 10px 0px;
+        }
+        .join_call{
+            border-radius: 5cm;
+            transition-duration: 0.4s;
+            font-size: large; 
+        }
+        .join_call:hover {
+            font-style: italic;
+            font-size: large;
+            background-color: #bdd8bd; /* Green */
+            color: rgb(31, 28, 28);
+        }
+        .chat_box{
+            border-radius: 5cm;
+            transition-duration: 0.4s;
+            font-size: large; 
+        }
+        .chat_box:hover {
+            font-style: italic;
+            font-size: large;
+            background-color: #bdd8bd; /* Green */
+            color: rgb(31, 28, 28);
+        }
+        .leave{
+            background:rgb(236, 122, 122);
+            border-width: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .leave:hover{
+            background: rgb(187, 13, 13);
+        }
+        
+    </style>
+    </head>
+    <body>
+        <div class="receiver_page">
+            <input placeholder="Enter id"
+                    type="text"
+                    id="username-input" /><br>
+            <button onclick="joinCall()" class="join_call">Join Call</button>
+            <script>
+                function NewTab() {
+                    window.open(
+                    "https://arcane-journey-18816.herokuapp.com/", "_blank");
+                }
+            </script>
+            <button onclick="NewTab()" class="chat_box">
+                Chat Box
+            </button>
+        </div>
+        <div id="video-call-div">
+            <video muted id="local-video" autoplay></video>
+            <video id="remote-video" autoplay></video>
+            <div class="call-action-div">
+                <button type="button" class="video_button" onclick="muteVideo()">
+                    <span class="video_button_icon">
+                        <ion-icon name="videocam-off-outline"></ion-icon>
+                    </span>
+                </button>
+                <!-- <button onclick="muteAudio()">Mute Audio</button> -->
+                <button type="button" class="mute_button" onclick="muteAudio()">
+                    <span class="button_icon">
+                        <ion-icon name="mic-off-outline"></ion-icon>
+                    </span>
+                </button>
+                <button type="button"  class="leave" onclick="history.back()">Leave</button>
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+            </div>
+        </div>
+        <script src="./receiver.js"></script>
+    </body>
+
+</html>
