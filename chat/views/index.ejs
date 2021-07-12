@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Application</title>
+    <Script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></Script>
+    <!-- css for the chat box -->
+    <style>
+        body{
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 50px;
+        text-align: center;
+        color: #8484a4;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+        .name{
+            text-align: center;
+        }
+        .username_input{
+            background-color: rgba(0,0,0,0.5);
+            width: 25%;
+            height:6vh;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            border-radius: 10px 0px 10px 0px;
+            
+        }
+        .change_username{
+            border-radius: 5cm;
+            transition-duration: 0.4s;
+            font-size: large;
+        }
+        .message{
+            text-align: center;
+        }
+        .message_box{
+            background-color: rgba(0,0,0,0.5);
+            width: 25%;
+            height:6vh;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 25px;
+            border-radius: 10px 0px 10px 0px;
+        }
+        .send_message{
+            border-radius: 5cm;
+            transition-duration: 0.4s;
+            font-size: large;
+        }
+        </style>
+    
+</head>
+<body>
+    <h1>Chat Application<br></h1>
+    <div class="name">
+    <input type="text" class="username_input" id="username" />
+    <button type="submit" id="change_username" class="change_username">Change Username</button>
+    </div>
+     <div id="feedback"></div>
+       <!-- feedback=display -->
+    <div class="message">
+    <input type="text" class="message_box" id="message" />
+    <button type="submit" class="send_message" id="change_message">Send Message</button>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="chat.js"></script>
+</html>
